@@ -1,10 +1,5 @@
-﻿using System.Xml.Serialization;
-using System.Xml;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.AxHost;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using System;
+﻿using System.Xml;
+using System.Xml.Serialization;
 
 namespace Keyboard_Locker;
 
@@ -197,6 +192,7 @@ public static class KeysClass
             _ => ""
         };
     }
+
     public static Keys String2Key(string key)
     {
         return key switch

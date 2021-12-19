@@ -75,18 +75,18 @@ namespace Keyboard_Locker
             this.btnC = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.btnZ = new System.Windows.Forms.Button();
-            this.btnTab = new System.Windows.Forms.CheckBox();
-            this.btnCapsLock = new System.Windows.Forms.CheckBox();
-            this.btnLShiftKey = new System.Windows.Forms.CheckBox();
+            this.btnTab = new System.Windows.Forms.Button();
+            this.btnCapsLock = new System.Windows.Forms.Button();
+            this.btnLShiftKey = new System.Windows.Forms.Button();
             this.btnD2 = new System.Windows.Forms.Button();
-            this.btnLControlKey = new System.Windows.Forms.CheckBox();
-            this.btnLWin = new System.Windows.Forms.CheckBox();
-            this.btnLMenu = new System.Windows.Forms.CheckBox();
-            this.btnRMenu = new System.Windows.Forms.CheckBox();
-            this.btnRControlKey = new System.Windows.Forms.CheckBox();
+            this.btnLControlKey = new System.Windows.Forms.Button();
+            this.btnLWin = new System.Windows.Forms.Button();
+            this.btnLMenu = new System.Windows.Forms.Button();
+            this.btnRMenu = new System.Windows.Forms.Button();
+            this.btnRControlKey = new System.Windows.Forms.Button();
             this.btnSpace = new System.Windows.Forms.Button();
-            this.btnRShiftKey = new System.Windows.Forms.CheckBox();
-            this.btnBack = new System.Windows.Forms.CheckBox();
+            this.btnRShiftKey = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
@@ -101,9 +101,9 @@ namespace Keyboard_Locker
             this.btnNumPad2 = new System.Windows.Forms.Button();
             this.btnDecimal = new System.Windows.Forms.Button();
             this.btnNumPad0 = new System.Windows.Forms.Button();
-            this.btnNumLock = new System.Windows.Forms.CheckBox();
+            this.btnNumLock = new System.Windows.Forms.Button();
             this.btnSubtract = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.CheckBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
@@ -124,8 +124,8 @@ namespace Keyboard_Locker
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEscape = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnApps = new System.Windows.Forms.CheckBox();
-            this.btnRWin = new System.Windows.Forms.CheckBox();
+            this.btnApps = new System.Windows.Forms.Button();
+            this.btnRWin = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnPageDown = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -874,7 +874,6 @@ namespace Keyboard_Locker
             // 
             // btnTab
             // 
-            this.btnTab.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnTab.BackColor = System.Drawing.Color.Red;
             this.btnTab.FlatAppearance.BorderSize = 0;
             this.btnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -892,7 +891,6 @@ namespace Keyboard_Locker
             // 
             // btnCapsLock
             // 
-            this.btnCapsLock.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnCapsLock.BackColor = System.Drawing.Color.Red;
             this.btnCapsLock.FlatAppearance.BorderSize = 0;
             this.btnCapsLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -910,7 +908,6 @@ namespace Keyboard_Locker
             // 
             // btnLShiftKey
             // 
-            this.btnLShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnLShiftKey.BackColor = System.Drawing.Color.Red;
             this.btnLShiftKey.FlatAppearance.BorderSize = 0;
             this.btnLShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -944,7 +941,6 @@ namespace Keyboard_Locker
             // 
             // btnLControlKey
             // 
-            this.btnLControlKey.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnLControlKey.BackColor = System.Drawing.Color.Red;
             this.btnLControlKey.FlatAppearance.BorderSize = 0;
             this.btnLControlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -962,7 +958,6 @@ namespace Keyboard_Locker
             // 
             // btnLWin
             // 
-            this.btnLWin.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnLWin.BackColor = System.Drawing.Color.Red;
             this.btnLWin.FlatAppearance.BorderSize = 0;
             this.btnLWin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -980,7 +975,6 @@ namespace Keyboard_Locker
             // 
             // btnLMenu
             // 
-            this.btnLMenu.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnLMenu.BackColor = System.Drawing.Color.Red;
             this.btnLMenu.FlatAppearance.BorderSize = 0;
             this.btnLMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -998,7 +992,6 @@ namespace Keyboard_Locker
             // 
             // btnRMenu
             // 
-            this.btnRMenu.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnRMenu.BackColor = System.Drawing.Color.Red;
             this.btnRMenu.FlatAppearance.BorderSize = 0;
             this.btnRMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1016,7 +1009,6 @@ namespace Keyboard_Locker
             // 
             // btnRControlKey
             // 
-            this.btnRControlKey.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnRControlKey.BackColor = System.Drawing.Color.Red;
             this.btnRControlKey.FlatAppearance.BorderSize = 0;
             this.btnRControlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1050,7 +1042,6 @@ namespace Keyboard_Locker
             // 
             // btnRShiftKey
             // 
-            this.btnRShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnRShiftKey.BackColor = System.Drawing.Color.Red;
             this.btnRShiftKey.FlatAppearance.BorderSize = 0;
             this.btnRShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1068,7 +1059,6 @@ namespace Keyboard_Locker
             // 
             // btnBack
             // 
-            this.btnBack.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnBack.BackColor = System.Drawing.Color.Red;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1310,7 +1300,6 @@ namespace Keyboard_Locker
             // 
             // btnNumLock
             // 
-            this.btnNumLock.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnNumLock.BackColor = System.Drawing.Color.Red;
             this.btnNumLock.FlatAppearance.BorderSize = 0;
             this.btnNumLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1344,7 +1333,6 @@ namespace Keyboard_Locker
             // 
             // btnReturn
             // 
-            this.btnReturn.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnReturn.BackColor = System.Drawing.Color.Red;
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1684,7 +1672,6 @@ namespace Keyboard_Locker
             // 
             // btnApps
             // 
-            this.btnApps.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnApps.BackColor = System.Drawing.Color.Red;
             this.btnApps.FlatAppearance.BorderSize = 0;
             this.btnApps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1702,7 +1689,6 @@ namespace Keyboard_Locker
             // 
             // btnRWin
             // 
-            this.btnRWin.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnRWin.BackColor = System.Drawing.Color.Red;
             this.btnRWin.FlatAppearance.BorderSize = 0;
             this.btnRWin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2008,18 +1994,18 @@ namespace Keyboard_Locker
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnZ;
-        private System.Windows.Forms.CheckBox btnTab;
-        private System.Windows.Forms.CheckBox btnCapsLock;
-        private System.Windows.Forms.CheckBox btnLShiftKey;
+        private System.Windows.Forms.Button btnTab;
+        private System.Windows.Forms.Button btnCapsLock;
+        private System.Windows.Forms.Button btnLShiftKey;
         private System.Windows.Forms.Button btnD2;
-        private System.Windows.Forms.CheckBox btnLControlKey;
-        private System.Windows.Forms.CheckBox btnLWin;
-        private System.Windows.Forms.CheckBox btnLMenu;
-        private System.Windows.Forms.CheckBox btnRMenu;
-        private System.Windows.Forms.CheckBox btnRControlKey;
+        private System.Windows.Forms.Button btnLControlKey;
+        private System.Windows.Forms.Button btnLWin;
+        private System.Windows.Forms.Button btnLMenu;
+        private System.Windows.Forms.Button btnRMenu;
+        private System.Windows.Forms.Button btnRControlKey;
         private System.Windows.Forms.Button btnSpace;
-        private System.Windows.Forms.CheckBox btnRShiftKey;
-        private System.Windows.Forms.CheckBox btnBack;
+        private System.Windows.Forms.Button btnRShiftKey;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button btnUp;
@@ -2034,9 +2020,9 @@ namespace Keyboard_Locker
         private System.Windows.Forms.Button btnNumPad2;
         private System.Windows.Forms.Button btnDecimal;
         private System.Windows.Forms.Button btnNumPad0;
-        private System.Windows.Forms.CheckBox btnNumLock;
+        private System.Windows.Forms.Button btnNumLock;
         private System.Windows.Forms.Button btnSubtract;
-        private System.Windows.Forms.CheckBox btnReturn;
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnRight;
@@ -2057,8 +2043,8 @@ namespace Keyboard_Locker
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEscape;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.CheckBox btnApps;
-        private System.Windows.Forms.CheckBox btnRWin;
+        private System.Windows.Forms.Button btnApps;
+        private System.Windows.Forms.Button btnRWin;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnPageDown;
         private System.Windows.Forms.Button btnInsert;
