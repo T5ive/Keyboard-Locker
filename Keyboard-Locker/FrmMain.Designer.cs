@@ -47,7 +47,7 @@
             this.btnLock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLock.Location = new System.Drawing.Point(0, 25);
             this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(204, 51);
+            this.btnLock.Size = new System.Drawing.Size(219, 51);
             this.btnLock.TabIndex = 0;
             this.btnLock.Text = "Lock";
             this.btnLock.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.btnSettings});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(204, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(219, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -116,15 +116,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 76);
+            this.ClientSize = new System.Drawing.Size(219, 76);
             this.Controls.Add(this.btnLock);
             this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(220, 115);
+            this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lock Keyboard";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.SizeChanged += new System.EventHandler(this.FrmMain_SizeChanged);
