@@ -5,7 +5,7 @@ namespace Keyboard_Locker;
 
 public static class KeysClass
 {
-    public static List<Keys> UnlockList = new List<Keys>();
+    public static List<Keys> UnlockList = new();
     private static readonly string AppPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "List.xml");
 
     public static void LoadXml()
@@ -13,7 +13,7 @@ public static class KeysClass
         try
         {
             UnlockList = LoadXml<List<Keys>>(AppPath);
-            if (UnlockList == null)
+            if (UnlockList is not { Count: > 0 })
             {
                 UnlockList = new List<Keys>();
             }

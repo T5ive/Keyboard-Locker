@@ -68,7 +68,7 @@ public partial class FrmMain : Form
         var mainModule = Process.GetCurrentProcess().MainModule;
         if (mainModule == null) return false;
         _keyProcess = CaptureKey;
-        _ptrHook = SetWindowsHookEx(13, _keyProcess, GetModuleHandle(mainModule.ModuleName), 0);
+        _ptrHook = SetWindowsHookEx(13, _keyProcess, GetModuleHandle(mainModule.ModuleName!), 0);
         return true;
     }
 
@@ -84,7 +84,14 @@ public partial class FrmMain : Form
 
     #endregion Load/Close
 
+    #region Keyboard Locker
+
     private void btnLock_Click(object sender, EventArgs e)
+    {
+        KeyboardLock();
+    }
+
+    private void KeyboardLock()
     {
         _isLock = !_isLock;
         btnLock.Text = _isLock ? "UnLock" : "Lock";
@@ -114,6 +121,8 @@ public partial class FrmMain : Form
         }
         return CallNextHookEx(_ptrHook, nCode, wp, lp);
     }
+
+    #endregion Keyboard Locker
 
     #region Form Size
 
@@ -155,7 +164,7 @@ public partial class FrmMain : Form
 
     private void LockToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        btnLock.PerformClick();
+        KeyboardLock();
     }
 
     private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
