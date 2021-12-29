@@ -9,13 +9,23 @@ public partial class FrmSettings : Form
 
     private void FrmSettings_Shown(object sender, EventArgs e)
     {
-        if (KeysClass.UnlockList.Count == 0) return;
-        var btnList = GetControls(this);
-        foreach (var key in KeysClass.UnlockList)
+        if (KeysClass.UnlockList is { Count: > 0 })
         {
-            foreach (var btn in btnList.Where(btn => key.ToString() == btn.Name.Replace("btn", "")))
+            var btnList = GetControls(this);
+            foreach (var key in KeysClass.UnlockList)
             {
-                LockThis((Button)btn, key, false);
+                foreach (var btn in btnList.Where(btn => key.ToString() == btn.Name.Replace("btn", "")))
+                {
+                    LockThis((Button)btn, key, false);
+                }
+            }
+        }
+
+        if (KeysClass.CustomUnlockList is { Count: > 0 })
+        {
+            foreach (var key in KeysClass.CustomUnlockList)
+            {
+                cbCustomKey.Items.Add(key.ToString());
             }
         }
     }
@@ -95,5 +105,20 @@ public partial class FrmSettings : Form
     private static bool CheckController(Control control, IEnumerable<string> ends)
     {
         return ends.Any(t => control.GetType().Name.EndsWith(t, StringComparison.OrdinalIgnoreCase));
+    }
+
+    private void btnAddKey_Click(object sender, EventArgs e)
+    {
+        cbCustomKey.Items.Add(txtCustomKey.Text);
+        KeysClass.CustomUnlockList.Add(KeysClass.String2Key(txtCustomKey.Text));
+        cbCustomKey.SelectedIndex = cbCustomKey.Items.Count - 1;
+        txtCustomKey.Clear();
+    }
+
+    private void btnRemoveKey_Click(object sender, EventArgs e)
+    {
+        cbCustomKey.Items.RemoveAt(cbCustomKey.SelectedIndex);
+        KeysClass.CustomUnlockList.RemoveAt(cbCustomKey.SelectedIndex);
+        txtCustomKey.Clear();
     }
 }

@@ -38,6 +38,7 @@
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnSettings = new System.Windows.Forms.ToolStripButton();
+            this.btnKeyDetection = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +96,8 @@
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnSettings});
+            this.btnSettings,
+            this.btnKeyDetection});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(219, 25);
@@ -111,6 +113,16 @@
             this.btnSettings.Size = new System.Drawing.Size(53, 22);
             this.btnSettings.Text = "Settings";
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnKeyDetection
+            // 
+            this.btnKeyDetection.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnKeyDetection.Image = ((System.Drawing.Image)(resources.GetObject("btnKeyDetection.Image")));
+            this.btnKeyDetection.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnKeyDetection.Name = "btnKeyDetection";
+            this.btnKeyDetection.Size = new System.Drawing.Size(84, 22);
+            this.btnKeyDetection.Text = "Key Detection";
+            this.btnKeyDetection.Click += new System.EventHandler(this.btnKeyDetection_Click);
             // 
             // FrmMain
             // 
@@ -147,5 +159,6 @@
         private ToolStripMenuItem ExitToolStripMenuItem;
         private ToolStrip toolStrip1;
         private ToolStripButton btnSettings;
+        private ToolStripButton btnKeyDetection;
     }
 }

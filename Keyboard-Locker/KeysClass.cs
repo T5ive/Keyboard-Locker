@@ -1,22 +1,22 @@
-﻿using System.Xml;
-using System.Xml.Serialization;
-
-namespace Keyboard_Locker;
+﻿namespace Keyboard_Locker;
 
 public static class KeysClass
 {
+    public static (List<Keys>, List<Keys>) ListProfile;
     public static List<Keys> UnlockList = new();
+    public static List<Keys> CustomUnlockList = new();
+
     private static readonly string AppPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "List.xml");
 
     public static void LoadXml()
     {
         try
         {
-            UnlockList = LoadXml<List<Keys>>(AppPath);
-            if (UnlockList is not { Count: > 0 })
-            {
-                UnlockList = new List<Keys>();
-            }
+            ListProfile = LoadXml<(List<Keys>, List<Keys>)>(AppPath);
+
+
+            UnlockList = ListProfile.Item1 is { Count: > 0 } ? ListProfile.Item1 : new List<Keys>();
+            CustomUnlockList = ListProfile.Item2 is { Count: > 0 } ? ListProfile.Item2 : new List<Keys>();
         }
         catch
         {
@@ -189,6 +189,17 @@ public static class KeysClass
             Keys.NumPad7 => "NumPad7",
             Keys.NumPad8 => "NumPad8",
             Keys.NumPad9 => "NumPad9",
+
+            Keys.VolumeMute => "VolumeMute",
+            Keys.VolumeDown => "VolumeDown",
+            Keys.VolumeUp => "VolumeUp",
+
+            Keys.MediaPlayPause => "MediaPlayPause",
+            Keys.MediaStop => "MediaStop",
+            Keys.MediaPreviousTrack => "MediaPreviousTrack",
+            Keys.MediaNextTrack => "MediaNextTrack",
+
+
             _ => ""
         };
     }
@@ -309,6 +320,29 @@ public static class KeysClass
             "NumPad7" => Keys.NumPad7,
             "NumPad8" => Keys.NumPad8,
             "NumPad9" => Keys.NumPad9,
+
+            "VolumeMute" => Keys.VolumeMute,
+            "VolumeDown" => Keys.VolumeDown,
+            "VolumeUp" => Keys.VolumeUp,
+
+            "F13" => Keys.F13,
+            "F14" => Keys.F14,
+            "F15" => Keys.F15,
+            "F16" => Keys.F16,
+            "F17" => Keys.F17,
+            "F18" => Keys.F18,
+            "F19" => Keys.F19,
+            "F20" => Keys.F20,
+            "F21" => Keys.F21,
+            "F22" => Keys.F22,
+            "F23" => Keys.F23,
+            "F24" => Keys.F24,
+
+            "MediaPlayPause" => Keys.MediaPlayPause,
+            "MediaStop" => Keys.MediaStop,
+            "MediaPreviousTrack" => Keys.MediaPreviousTrack,
+            "MediaNextTrack" => Keys.MediaNextTrack,
+
             _ => Keys.None
         };
     }

@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices;
-
-namespace Keyboard_Locker;
+﻿namespace Keyboard_Locker;
 
 public partial class FrmMain : Form
 {
@@ -75,7 +72,9 @@ public partial class FrmMain : Form
     private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
     {
         UnhookWindowsHookEx(_ptrHook);
-        if (!KeysClass.SaveXml(KeysClass.UnlockList, "List.xml"))
+        KeysClass.ListProfile.Item1 = KeysClass.UnlockList;
+        KeysClass.ListProfile.Item2 = KeysClass.CustomUnlockList;
+        if (!KeysClass.SaveXml(KeysClass.ListProfile, "List.xml"))
         {
             MessageBox.Show("Can not Save Settings", Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -107,7 +106,17 @@ public partial class FrmMain : Form
         {
             var objKey = (KeyboardDllHook)Marshal.PtrToStructure(lp, typeof(KeyboardDllHook))!;
 
+            if (Program.FrmKeyDetection.Detection)
+            {
+                Program.FrmKeyDetection.Output(objKey.key.ToString());
+            }
+
             if (KeysClass.UnlockList.Contains(objKey.key))
+            {
+                return CallNextHookEx(_ptrHook, nCode, wp, lp);
+            }
+
+            if (KeysClass.CustomUnlockList.Contains(objKey.key))
             {
                 return CallNextHookEx(_ptrHook, nCode, wp, lp);
             }
@@ -179,5 +188,11 @@ public partial class FrmMain : Form
         var frmSettings = new FrmSettings();
         frmSettings.ShowDialog();
         frmSettings.Dispose();
+    }
+
+    private void btnKeyDetection_Click(object sender, EventArgs e)
+    {
+        Program.FrmKeyDetection.Detection = true;
+        Program.FrmKeyDetection.Show();
     }
 }

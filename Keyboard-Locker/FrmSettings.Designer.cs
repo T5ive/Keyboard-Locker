@@ -133,6 +133,10 @@ namespace Keyboard_Locker
             this.btnPause = new System.Windows.Forms.Button();
             this.btnPrintScreen = new System.Windows.Forms.Button();
             this.btnScroll = new System.Windows.Forms.Button();
+            this.txtCustomKey = new System.Windows.Forms.TextBox();
+            this.cbCustomKey = new System.Windows.Forms.ComboBox();
+            this.btnAddKey = new System.Windows.Forms.Button();
+            this.btnRemoveKey = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOemtilde
@@ -885,7 +889,6 @@ namespace Keyboard_Locker
             this.btnTab.Size = new System.Drawing.Size(65, 45);
             this.btnTab.TabIndex = 47;
             this.btnTab.Text = "TAB";
-            this.btnTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTab.UseVisualStyleBackColor = false;
             this.btnTab.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -902,7 +905,6 @@ namespace Keyboard_Locker
             this.btnCapsLock.Size = new System.Drawing.Size(87, 45);
             this.btnCapsLock.TabIndex = 48;
             this.btnCapsLock.Text = "CAPS LOCK";
-            this.btnCapsLock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCapsLock.UseVisualStyleBackColor = false;
             this.btnCapsLock.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -919,7 +921,6 @@ namespace Keyboard_Locker
             this.btnLShiftKey.Size = new System.Drawing.Size(112, 45);
             this.btnLShiftKey.TabIndex = 49;
             this.btnLShiftKey.Text = "SHIFT";
-            this.btnLShiftKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLShiftKey.UseVisualStyleBackColor = false;
             this.btnLShiftKey.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -952,7 +953,6 @@ namespace Keyboard_Locker
             this.btnLControlKey.Size = new System.Drawing.Size(60, 45);
             this.btnLControlKey.TabIndex = 52;
             this.btnLControlKey.Text = "CTRL";
-            this.btnLControlKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLControlKey.UseVisualStyleBackColor = false;
             this.btnLControlKey.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -969,7 +969,6 @@ namespace Keyboard_Locker
             this.btnLWin.Size = new System.Drawing.Size(60, 45);
             this.btnLWin.TabIndex = 53;
             this.btnLWin.Text = "❖";
-            this.btnLWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLWin.UseVisualStyleBackColor = false;
             this.btnLWin.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -986,7 +985,6 @@ namespace Keyboard_Locker
             this.btnLMenu.Size = new System.Drawing.Size(60, 45);
             this.btnLMenu.TabIndex = 54;
             this.btnLMenu.Text = "ALT";
-            this.btnLMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLMenu.UseVisualStyleBackColor = false;
             this.btnLMenu.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1003,7 +1001,6 @@ namespace Keyboard_Locker
             this.btnRMenu.Size = new System.Drawing.Size(60, 45);
             this.btnRMenu.TabIndex = 55;
             this.btnRMenu.Text = "ALT";
-            this.btnRMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRMenu.UseVisualStyleBackColor = false;
             this.btnRMenu.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1020,7 +1017,6 @@ namespace Keyboard_Locker
             this.btnRControlKey.Size = new System.Drawing.Size(60, 45);
             this.btnRControlKey.TabIndex = 56;
             this.btnRControlKey.Text = "CTRL";
-            this.btnRControlKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRControlKey.UseVisualStyleBackColor = false;
             this.btnRControlKey.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1053,7 +1049,6 @@ namespace Keyboard_Locker
             this.btnRShiftKey.Size = new System.Drawing.Size(112, 45);
             this.btnRShiftKey.TabIndex = 59;
             this.btnRShiftKey.Text = "SHIFT";
-            this.btnRShiftKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRShiftKey.UseVisualStyleBackColor = false;
             this.btnRShiftKey.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1070,7 +1065,6 @@ namespace Keyboard_Locker
             this.btnBack.Size = new System.Drawing.Size(85, 45);
             this.btnBack.TabIndex = 61;
             this.btnBack.Text = "←";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1311,7 +1305,6 @@ namespace Keyboard_Locker
             this.btnNumLock.Size = new System.Drawing.Size(45, 45);
             this.btnNumLock.TabIndex = 77;
             this.btnNumLock.Text = "NUM\r\nLOCK";
-            this.btnNumLock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNumLock.UseVisualStyleBackColor = false;
             this.btnNumLock.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1344,7 +1337,6 @@ namespace Keyboard_Locker
             this.btnReturn.Size = new System.Drawing.Size(45, 94);
             this.btnReturn.TabIndex = 80;
             this.btnReturn.Text = "ENTER";
-            this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1612,7 +1604,7 @@ namespace Keyboard_Locker
             this.btnEnd.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEnd.ForeColor = System.Drawing.Color.White;
             this.btnEnd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnd.Location = new System.Drawing.Point(794, 110);
+            this.btnEnd.Location = new System.Drawing.Point(794, 109);
             this.btnEnd.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(45, 45);
@@ -1629,7 +1621,7 @@ namespace Keyboard_Locker
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(745, 110);
+            this.btnDelete.Location = new System.Drawing.Point(745, 109);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(45, 45);
@@ -1683,7 +1675,6 @@ namespace Keyboard_Locker
             this.btnApps.Size = new System.Drawing.Size(60, 45);
             this.btnApps.TabIndex = 103;
             this.btnApps.Text = "■";
-            this.btnApps.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnApps.UseVisualStyleBackColor = false;
             this.btnApps.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1700,7 +1691,6 @@ namespace Keyboard_Locker
             this.btnRWin.Size = new System.Drawing.Size(60, 45);
             this.btnRWin.TabIndex = 104;
             this.btnRWin.Text = "❖";
-            this.btnRWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRWin.UseVisualStyleBackColor = false;
             this.btnRWin.Click += new System.EventHandler(this.ClickButtons);
             // 
@@ -1729,7 +1719,7 @@ namespace Keyboard_Locker
             this.btnPageDown.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPageDown.ForeColor = System.Drawing.Color.White;
             this.btnPageDown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPageDown.Location = new System.Drawing.Point(843, 110);
+            this.btnPageDown.Location = new System.Drawing.Point(843, 109);
             this.btnPageDown.Margin = new System.Windows.Forms.Padding(2);
             this.btnPageDown.Name = "btnPageDown";
             this.btnPageDown.Size = new System.Drawing.Size(45, 45);
@@ -1746,7 +1736,7 @@ namespace Keyboard_Locker
             this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnInsert.ForeColor = System.Drawing.Color.White;
             this.btnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsert.Location = new System.Drawing.Point(745, 61);
+            this.btnInsert.Location = new System.Drawing.Point(745, 60);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(45, 45);
@@ -1763,7 +1753,7 @@ namespace Keyboard_Locker
             this.btnPageUp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPageUp.ForeColor = System.Drawing.Color.White;
             this.btnPageUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPageUp.Location = new System.Drawing.Point(843, 61);
+            this.btnPageUp.Location = new System.Drawing.Point(843, 60);
             this.btnPageUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnPageUp.Name = "btnPageUp";
             this.btnPageUp.Size = new System.Drawing.Size(45, 45);
@@ -1814,7 +1804,7 @@ namespace Keyboard_Locker
             this.btnScroll.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnScroll.ForeColor = System.Drawing.Color.White;
             this.btnScroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScroll.Location = new System.Drawing.Point(794, 10);
+            this.btnScroll.Location = new System.Drawing.Point(794, 11);
             this.btnScroll.Margin = new System.Windows.Forms.Padding(2);
             this.btnScroll.Name = "btnScroll";
             this.btnScroll.Size = new System.Drawing.Size(45, 45);
@@ -1823,11 +1813,51 @@ namespace Keyboard_Locker
             this.btnScroll.UseVisualStyleBackColor = false;
             this.btnScroll.Click += new System.EventHandler(this.ClickButtons);
             // 
+            // txtCustomKey
+            // 
+            this.txtCustomKey.Location = new System.Drawing.Point(898, 11);
+            this.txtCustomKey.Name = "txtCustomKey";
+            this.txtCustomKey.Size = new System.Drawing.Size(144, 22);
+            this.txtCustomKey.TabIndex = 112;
+            // 
+            // cbCustomKey
+            // 
+            this.cbCustomKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCustomKey.FormattingEnabled = true;
+            this.cbCustomKey.Location = new System.Drawing.Point(898, 35);
+            this.cbCustomKey.Name = "cbCustomKey";
+            this.cbCustomKey.Size = new System.Drawing.Size(144, 21);
+            this.cbCustomKey.TabIndex = 113;
+            // 
+            // btnAddKey
+            // 
+            this.btnAddKey.Location = new System.Drawing.Point(1046, 9);
+            this.btnAddKey.Name = "btnAddKey";
+            this.btnAddKey.Size = new System.Drawing.Size(45, 23);
+            this.btnAddKey.TabIndex = 114;
+            this.btnAddKey.Text = "+";
+            this.btnAddKey.UseVisualStyleBackColor = true;
+            this.btnAddKey.Click += new System.EventHandler(this.btnAddKey_Click);
+            // 
+            // btnRemoveKey
+            // 
+            this.btnRemoveKey.Location = new System.Drawing.Point(1046, 33);
+            this.btnRemoveKey.Name = "btnRemoveKey";
+            this.btnRemoveKey.Size = new System.Drawing.Size(45, 23);
+            this.btnRemoveKey.TabIndex = 115;
+            this.btnRemoveKey.Text = "-";
+            this.btnRemoveKey.UseVisualStyleBackColor = true;
+            this.btnRemoveKey.Click += new System.EventHandler(this.btnRemoveKey_Click);
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 311);
+            this.Controls.Add(this.btnRemoveKey);
+            this.Controls.Add(this.btnAddKey);
+            this.Controls.Add(this.cbCustomKey);
+            this.Controls.Add(this.txtCustomKey);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnPrintScreen);
             this.Controls.Add(this.btnScroll);
@@ -1943,6 +1973,7 @@ namespace Keyboard_Locker
             this.TopMost = true;
             this.Shown += new System.EventHandler(this.FrmSettings_Shown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2052,6 +2083,10 @@ namespace Keyboard_Locker
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnPrintScreen;
         private System.Windows.Forms.Button btnScroll;
+        private TextBox txtCustomKey;
+        private ComboBox cbCustomKey;
+        private Button btnAddKey;
+        private Button btnRemoveKey;
     }
 }
 
