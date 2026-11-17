@@ -10,15 +10,15 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [Net6]
+        platform: [Net10]
         include:          
-          - platform: Net6
-            package-name: Net6
-            build-dir: net6.0-windows
+          - platform: Net10
+            package-name: Net10
+            build-dir: net10.0-windows
             proj-name: Keyboard-Locker
             solution-name: Keyboard-Locker.sln
             config: Release
-            dotnet: 6.0.x
+            dotnet: 10.0.x
 
     runs-on: windows-latest
 
